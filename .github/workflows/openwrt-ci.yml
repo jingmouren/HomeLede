@@ -181,7 +181,6 @@ jobs:
           df -h
       - name: Compile firmware
         run: |
-          make menuconfig
           make -j$(nproc) || make -j1 V=s
           echo "======================="
           echo "Space usage:"
